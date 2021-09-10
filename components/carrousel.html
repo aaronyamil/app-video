@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel 1</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    .carousel{
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative;
+    }
+    .carousel__container {
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+    .carousel-item {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: royalblue;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms all;
+        transform-origin: center left;
+        position: relative;
+    }
+    .carousel-item:hover ~ .carousel-item{
+        transform: translate3d(100px, 0, 0);
+    }
+
+    .carousel__container:hover .carousel-item {
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel-item:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    .carousel-item__img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .carousel-item__details {
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
+        font-size: 10px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/3493730/pexels-photo-3493730.jpeg?cs=srgb&dl=pexels-aleksey-kuprikov-3493730.jpg&fm=jpg" alt="monkeys">
+                <div class="carousel-item__details">
+                    <img src="./assets/play-icon.png" alt="play">
+                    <img src="./assets/plus-icon.png" alt="plus">
+                </div>
+                <p class="carousel-item__details--title">Título descriptivo</p>
+                <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/65289/polar-bear-bear-teddy-sleep-65289.jpeg?cs=srgb&dl=pexels-pixabay-65289.jpg&fm=jpg" alt="bears">
+                <div class="carousel-item__details">
+                    <img src="./assets/play-icon.png" alt="play">
+                    <img src="./assets/plus-icon.png" alt="plus">
+                </div>
+                <p class="carousel-item__details--title">Título descriptivo</p>
+                <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/3396657/pexels-photo-3396657.jpeg?cs=srgb&dl=pexels-josiah-farrow-3396657.jpg&fm=jpg" alt="llamas">
+                <div class="carousel-item__details">
+                    <img src="./assets/play-icon.png" alt="play">
+                    <img src="./assets/plus-icon.png" alt="plus">
+                </div>
+                <p class="carousel-item__details--title">Título descriptivo</p>
+                <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/4755029/pexels-photo-4755029.jpeg?cs=srgb&dl=pexels-kira-louw-4755029.jpg&fm=jpg" alt="dolphins">
+                <div class="carousel-item__details">
+                    <img src="./assets/play-icon.png" alt="play">
+                    <img src="./assets/plus-icon.png" alt="plus">
+                </div>
+                <p class="carousel-item__details--title">Título descriptivo</p>
+                <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/3876446/pexels-photo-3876446.jpeg?cs=srgb&dl=pexels-tomas-anunziata-3876446.jpg&fm=jpg" alt="birds">
+                <div class="carousel-item__details">
+                    <img src="./assets/play-icon.png" alt="play">
+                    <img src="./assets/plus-icon.png" alt="plus">
+                </div>
+                <p class="carousel-item__details--title">Título descriptivo</p>
+                <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
